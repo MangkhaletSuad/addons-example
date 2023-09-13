@@ -7,7 +7,7 @@ url: "https://github.com/home-assistant/addons-example/tree/main/example"
 
 
 
-
+# add sidebar
 ingress: true
 
 
