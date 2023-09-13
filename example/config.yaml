@@ -5,13 +5,10 @@ slug: example
 description: Example add-on
 url: "https://github.com/home-assistant/addons-example/tree/main/example"
 
-
-
 # add sidebar
 ingress: true
-
-
-
+ingress_port: 5000
+ingress_entry: /
 
 arch:
   - armhf
