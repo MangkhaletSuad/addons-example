@@ -15,4 +15,3 @@ COPY supervisor.sh /
 RUN chmod a+x /supervisor.sh
 
 CMD [ "/supervisor.sh" ]
-

@@ -4,7 +4,7 @@ version: "1.2.0"
 slug: example
 description: Example add-on
 url: "https://github.com/MangkhaletSuad/addons-example.git"
-webui: "http://[HOST]:[PORT:4449]"
+webui: "http://[HOST]:[PORT:8001]"
 
 parnel-icon: "mdi:cctv"
 panel_title: Example
