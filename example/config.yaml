@@ -15,7 +15,7 @@ ingress: true
 ingress_entry: dashboard/
 
 port:
-  4449: 4449
+  4449/tcp:4449
 
 arch:
   - armhf

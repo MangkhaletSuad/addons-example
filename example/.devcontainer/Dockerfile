@@ -1,21 +1,18 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Execute during the build of the image
-ARG TEMPIO_VERSION BUILD_ARCH
+# Install requirements for add-on
 RUN \
-    curl -sSLf -o /usr/bin/tempio \
-    "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
+  apk add --no-cache \
+    python3
 
-# Copy root filesystem
-COPY rootfs /
+# Python 3 HTTP Server serves the current working dir
+# So let's set it to our add-on persistent data directory.
+WORKDIR /data
 
-CMD node node-server/server/dist/node-server/server/src/index.js \
-   --http-port=$HTTP_PORT \
-   --config-path=$CONFIG_PATH \
-   --http-user=$HTTP_USER \
-   --http-password=$HTTP_PASSWORD\
-   --ssl-key-path=$SSL_KEY_PATH\
-   --ssl-cert-path=$SSL_CERT_PATH
+# Copy data for add-on
+COPY supervisor.sh /
+RUN chmod a+x /supervisor.sh
+
+CMD [ "/supervisor.sh" ]
 
