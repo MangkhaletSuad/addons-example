@@ -51,5 +51,7 @@ arch:
   - armv7
   - i386
 startup: services
+ingress: true
+ingress_port: 4444
 ports:
   5000/tcp: 4444
