@@ -3,7 +3,8 @@ name: Example add-on
 version: "1.2.0"
 slug: example
 description: Example add-on
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+url: "https://github.com/MangkhaletSuad/addons-example.git"
+webui: "http://[HOST]:[PORT:4449]"
 
 parnel-icon: "mdi:cctv"
 panel_title: Example
@@ -11,8 +12,10 @@ panel_admin: false
 
 # add sidebar
 ingress: true
-ingress_port: 4444
-ingress_entry: /
+ingress_entry: dashboard/
+
+port:
+  4449: 4449
 
 arch:
   - armhf
