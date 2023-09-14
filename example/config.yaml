@@ -16,7 +16,7 @@ ingress_entry: /
 ingress_port: 4444
 
 port:
-  4444/tcp:5000
+  5000/tcp: 4444
 
 arch:
   - armhf
