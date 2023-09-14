@@ -4,7 +4,7 @@ version: "1.2.0"
 slug: example
 description: Example add-on
 url: "https://github.com/MangkhaletSuad/addons-example.git"
-webui: "http://[HOST]:[PORT:8000]"
+webui: "http://[HOST]:[PORT:4444]"
 
 parnel-icon: "mdi:cctv"
 panel_title: Example
@@ -13,9 +13,10 @@ panel_admin: false
 # add sidebar
 ingress: true
 ingress_entry: /
+ingress_port: 4444
 
 port:
-  8000/tcp:8000
+  4444/tcp:5000
 
 arch:
   - armhf
@@ -27,9 +28,12 @@ init: false
 map:
   - share:rw
   - config:rw
+  - media:rw
   - ssl
 options:
   message: "Hello world..."
 schema:
   message: "str?"
 image: "ghcr.io/home-assistant/{arch}-addon-example"
+services:
+  - "mqtt:want"
