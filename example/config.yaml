@@ -5,6 +5,10 @@ slug: example
 description: Example add-on
 url: "https://github.com/home-assistant/addons-example/tree/main/example"
 
+parnel-icon: "mdi:cctv"
+panel_title: Example
+panel_admin: false
+
 # add sidebar
 ingress: true
 ingress_port: 4444
