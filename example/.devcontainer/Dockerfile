@@ -18,3 +18,4 @@ CMD node node-server/server/dist/node-server/server/src/index.js \
    --http-password=$HTTP_PASSWORD\
    --ssl-key-path=$SSL_KEY_PATH\
    --ssl-cert-path=$SSL_CERT_PATH
+
