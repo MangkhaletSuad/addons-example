@@ -12,10 +12,10 @@ panel_admin: false
 
 # add sidebar
 ingress: true
-ingress_entry: dashboard/
+ingress_entry: /
 
 port:
-  4449/tcp:4449
+  8001/tcp:8001
 
 arch:
   - armhf
