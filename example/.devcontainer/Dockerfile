@@ -5,6 +5,16 @@ ENV LANG C.UTF-8
 
 ENV RUUVI_DISCOVERY_ENV homeassistant
 
+RUN \	
+  apk add --no-cache \	
+    python3
+
+WORKDIR /data
+
+EXPOSE 8080
+
+RUN chmod a+x ./devcontainer/index.js
+
 CMD [ "node", "./.devcontainer/index.js" ]
 
 # Build arguments
