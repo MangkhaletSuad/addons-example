@@ -4,14 +4,13 @@
     "slug": "example",
     "description": "Example add-on",
     "url": "https://github.com/MangkhaletSuad/addons-example.git",
-    "webui": "http://[HOST]:[PORT:8080]",
+    "webui": "http://192.168.51.101:8080",
 
     "parnel-icon": "mdi:cctv",
     "panel_title": "Example",
     "panel_admin": false,
 
     "ingress": true,
-    "ingress_entry": "/",
     "ingress_port": 8080,
 
     "port": {
