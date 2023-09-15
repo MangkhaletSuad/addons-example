@@ -10,6 +10,8 @@ RUN \
 # So let's set it to our add-on persistent data directory.
 WORKDIR /data
 
+EXPOSE 8080
+
 # Copy data for add-on
 COPY ./devcontainer/supervisor.sh /
 RUN chmod a+x ./devcontainer/supervisor.sh
