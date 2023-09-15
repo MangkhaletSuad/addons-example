@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 
 ENV RUUVI_DISCOVERY_ENV homeassistant
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "./.devcontainer/index.js" ]
 
 # Build arguments
 ARG BUILD_ARCH
