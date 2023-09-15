@@ -34,12 +34,6 @@
         "media:rw",
         "ssl"
     ],
-    "options": {
-        "message": "Test_Test"
-    },
-    "schema": {
-        "message": "str?"
-    },
     "image": "ghcr.io/home-assistant/{arch}-addon-example",
     "services": [
         "mqtt:want"
