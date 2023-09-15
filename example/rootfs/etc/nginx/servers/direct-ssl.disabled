@@ -1,5 +1,5 @@
 server {
-    listen 80 default_server ssl;
+    listen 8080 default_server ssl;
 
     include /etc/nginx/includes/server_params.conf;
     include /etc/nginx/includes/ssl_params.conf;

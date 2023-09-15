@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bashio
 
-echo "Hello world!"
+# echo "Hello world!"
 
-echo "pik"
+# echo "pik"
 
-python3 -m http.server 8080
+# python3 -m http.server 8080
