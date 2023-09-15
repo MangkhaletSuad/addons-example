@@ -1,0 +1,45 @@
+{
+    "name": "Example add-on",
+    "version": "1.2.0",
+    "slug": "example",
+    "description": "Example add-on",
+    "url": "https://github.com/MangkhaletSuad/addons-example.git",
+    "webui": "http://[HOST]:[PORT:8080]",
+
+    "parnel-icon": "mdi:cctv",
+    "panel_title": "Example",
+    "panel_admin": false,
+
+    "ingress": true,
+    "ingress_entry": "/",
+    "ingress_port": 8080,
+
+    "port": {
+        "8080/tcp": 8080
+    },
+
+    "arch": [
+        "armhf",
+        "armv7",
+        "aarch64",
+        "amd64",
+        "i386"
+    ],
+    "init": false,
+    "map": [
+        "share:rw",
+        "config:rw",
+        "media:rw",
+        "ssl"
+    ],
+    "options": {
+        "message": "Test_Test"
+    },
+    "schema": {
+        "message": "str?"
+    },
+    "image": "ghcr.io/home-assistant/{arch}-addon-example",
+    "services": [
+        "mqtt:want"
+    ]
+}
