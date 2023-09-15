@@ -11,7 +11,7 @@ RUN \
 WORKDIR /data
 
 # Copy data for add-on
-COPY supervisor.sh /
-RUN chmod a+x /supervisor.sh
+COPY ./devcontainer/supervisor.sh /
+RUN chmod a+x ./devcontainer/supervisor.sh
 
-CMD [ "/supervisor.sh" ]
+CMD [ "./.devcontainer/supervisor.sh" ]
