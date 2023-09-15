@@ -17,6 +17,8 @@
     "port": {
         "8080/tcp": 8080
     },
+    "host_network": false,
+    "tmpfs": false,
 
     "arch": [
         "armhf",
