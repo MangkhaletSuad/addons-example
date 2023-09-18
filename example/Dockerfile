@@ -13,9 +13,8 @@ WORKDIR /data
 
 EXPOSE 8080
 
-RUN chmod a+x ./devcontainer/index.js
-
 COPY supervisor.sh /
+RUN chmod a+x /supervisor.sh
 
 CMD ["/supervisor.sh" ]
 
@@ -27,18 +26,20 @@ ARG BUILD_VERSION
 
 # Labels
 LABEL \
-    io.hass.name="ruuvitag-discovery" \
-    io.hass.description="home assistant ruuvitag discovery add-on" \
+    io.hass.name="${BUILD_NAME}" \
+    io.hass.description="${BUILD_DESCRIPTION}" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Balda" \
-    org.label-schema.description="Home Assistant RuuviTag discovery add-on" \
-    org.label-schema.build-date=${BUILD_DATE} \
-    org.label-schema.name="ruuvitag-discovery" \
-    org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/balda/ruuvitag-discovery" \
-    org.label-schema.usage="https://github.com/balda/ruuvitag-discovery/README.md" \
-    org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/balda/ruuvitag-discovery" \
-    org.label-schema.vendor="Community Hass.io Addons"
+    maintainer="Franck Nijhof <frenck@addons.community>" \
+    io.hass.name="${BUILD_NAME}" \
+    io.hass.description="${BUILD_DESCRIPTION}" \
+    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
+    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://addons.community" \
+    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
+    org.opencontainers.image.created=${BUILD_DATE} \
+    org.opencontainers.image.revision=${BUILD_REF} \
+    org.opencontainers.image.version=${BUILD_VERSION}

@@ -4,7 +4,6 @@
     "slug": "example",
     "description": "Example add-on",
     "url": "https://github.com/MangkhaletSuad/addons-example.git",
-    "startup": "services",
     "init": false,
 
     "ingress": true,
@@ -17,8 +16,6 @@
     "port": {
         "8080/tcp": 8080
     },
-    "host_network": false,
-    "tmpfs": false,
 
     "arch": [
         "armhf",
@@ -33,25 +30,11 @@
         "media:rw",
         "ssl"
     ],
-    "services": [
-        "mqtt:want"
-    ],
-    "option": {
-        "plugins": [],
-        "custom_plugins": [],
-        "env_vars": [],
-        "ssl": true
+    "options": {
+        "message": "Test"
     },
     "schema": {
-        "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
-        "plugins": [
-            "str"
-        ],
-        "custom_plugins": {
-            "name": "str",
-            "url": "str",
-            "unsigned": "bool?"
-        },
-        "ssl": "bool"
+        "message": "str?",
+        "image": "ghcr.io/home-assistant/{arch}-addon-example"
     }
 }
