@@ -9,13 +9,9 @@
     "ingress": true,
     "ingress_port": 8080,
 
-    "parnel-icon": "mdi:cctv",
+    "panel_icon": "mdi:cctv",
     "panel_title": "Example",
     "panel_admin": false,
-
-    "port": {
-        "8080/tcp": 8080
-    },
 
     "arch": [
         "armhf",
