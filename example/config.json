@@ -33,7 +33,6 @@
         "media:rw",
         "ssl"
     ],
-    "image": "ghcr.io/home-assistant/{arch}-addon-example",
     "services": [
         "mqtt:want"
     ],
