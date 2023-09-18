@@ -10,7 +10,6 @@ ingress_port: 8080
 
 panel_icon: "mdi:cctv"
 panel_title: "Example"
-panel_admin: false
 
 arch:
   - "armhf"
@@ -18,12 +17,6 @@ arch:
   - "aarch64"
   - "amd64"
   - "i386"
-
-map:
-  - "share:rw"
-  - "config:rw"
-  - "media:rw"
-  - "ssl"
 
 options:
   message: "Test"
