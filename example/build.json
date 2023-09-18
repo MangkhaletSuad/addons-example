@@ -14,9 +14,5 @@
     },
     "args": {
         "TEMPIO_VERSION": "2021.09.0"
-    },
-    "codenotary": {
-        "base_image": "codenotary@frenck.dev",
-        "signer": "codenotary@frenck.dev"
     }
 }
