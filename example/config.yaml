@@ -6,7 +6,7 @@ url: "https://github.com/MangkhaletSuad/addons-example.git"
 init: false
 
 ingress: true
-ingress_port: 8202
+ingress_port: 80
 
 panel_icon: "mdi:cctv"
 panel_title: "Example"
