@@ -11,9 +11,12 @@ ingress_port: 80
 panel_icon: "mdi:cctv"
 panel_title: "Example"
 
-arch: amd64
+arch: 
+  - amd64
 
 options:
+  schema:
+    message: "str?"
 
 schema:
   message: "str?"
