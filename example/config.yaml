@@ -11,6 +11,7 @@ ingress_port: 8202
 panel_icon: "mdi:cctv"
 panel_title: "Example"
 
+arch: amd64
 
 options:
 
