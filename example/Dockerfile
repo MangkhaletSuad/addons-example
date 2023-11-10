@@ -26,5 +26,4 @@ COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 # คัดลอกไฟล์จาก builder stage
 COPY --from=builder /usr/src/app/dist/my-app /usr/share/nginx/html
 
-EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
