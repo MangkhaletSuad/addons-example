@@ -1,7 +1,7 @@
-name: "Event management"
+name: "Event Management"
 version: "0.1.0"
-slug: "Event"
-description: "Event management add-on"
+slug: "Event Management"
+description: "Event Management add-on"
 url: "https://github.com/MangkhaletSuad/addons-example.git"
 init: false
 
@@ -9,15 +9,18 @@ ingress: true
 ingress_port: 80
 
 panel_icon: "mdi:cctv"
-panel_title: "Example"
+panel_title: "Event Management"
 
-arch: 
-  - amd64
+arch:
+  - "armhf"
+  - "armv7"
+  - "aarch64"
+  - "amd64"
+  - "i386"
 
 options:
-  schema:
-    message: "str?"
+  message: "str?"
 
 schema:
   message: "str?"
-
+  image: "ghcr.io/home-assistant/{arch}-addon-example"
