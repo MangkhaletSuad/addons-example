@@ -1,0 +1,19 @@
+{
+    "name": "Event Management",
+    "version": "0.1.0",
+    "slug": "Event Management",
+    "description": "Event Management add-on",
+    "url": "https://github.com/MangkhaletSuad/addons-example.git",
+    "init": false,
+    "startup": "application",
+    "ingress": true,
+    "ingress_port": 8202,
+
+    "panel_icon": "mdi:cctv",
+    "panel_title": "Event Management",
+    "ports_description": {},
+    "host_network": true,
+
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "boot": "auto"
+}

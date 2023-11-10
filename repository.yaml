@@ -1,4 +1,0 @@
-# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Event management
-url: "https://github.com/MangkhaletSuad/addons-example.git"
-maintainer: Awesome Maintainer <awesome@example.com>
