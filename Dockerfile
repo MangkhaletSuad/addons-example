@@ -10,7 +10,6 @@
 # COPY . .
 # RUN npm run build
 
-
 # FROM nginx:1.13.12-alpine
 
 # RUN rm -rf /usr/share/nginx/html/*
@@ -55,7 +54,6 @@ ARG BUILD_REF
 ARG BUILD_REPOSITORY
 ARG BUILD_VERSION
 
-
 # Labels
 LABEL \
     io.hass.name="${BUILD_NAME}" \
@@ -63,11 +61,11 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Alberto Geniola <albertogeniola@gmail.com>" \
+    maintainer="mangkhalet <mangkhalet.suad@gmail.com>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Alberto Geniola <albertogeniola@gmail.com>" \
+    org.opencontainers.image.authors="mangkhalet <mangkhalet.suad@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
