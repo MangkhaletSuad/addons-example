@@ -1,11 +1,8 @@
-ARG BUILD_FROM
-FROM ${BUILD_FROM}
-
+FROM node:18 AS builder
 RUN \	
   apk add --no-cache \	
     python3
-
-FROM node:18 AS builder
+    
 WORKDIR /usr/src/app
 
 COPY package*.json ./
