@@ -1,0 +1,80 @@
+.card svg.material-icons path {
+    fill: #888;
+}
+
+.card-container {
+    padding: 20px;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid white;
+    width: 100%;
+    height: 40%;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    // transition: all 0.2s ease-in-out;
+    // line-height: 24px;
+}
+
+.card-container .card:not(:last-child) {
+    margin-right: 0;
+}
+
+.card-container .card:not(.highlight-card) {
+    cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+}
+
+.example-form-field {
+    margin: 0 8px 16px 0;
+}
+
+.card .card-container .dropdown button {
+    background-color: white;
+    border-radius: 5px;
+    border-color: #aaa5a550;
+}
+
+.status-badge {
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 10px;
+    /* ปรับขนาดของสถานะตามต้องการ */
+    margin: 0 5px;
+    /* เพิ่มเว้นระยะห่างระหว่างสถานะ */
+    border: 1px solid transparent;
+    /* เพิ่มขอบรอบสถานะ */
+}
+
+.status-badge:hover {
+    opacity: 0.8;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+    /* สีสำหรับสถานะ OPEN */
+}
+
+.bg-primary {
+    background-color: #007bff;
+    /* สีสำหรับสถานะ ACCEPTED */
+}
+
+.bg-success {
+    background-color: rgba(40, 167, 70, 0.212);
+    /* สีสำหรับสถานะ CLOSE ที่จางลง */
+    // border-color: rgba(40, 167, 70, 0.137);
+    /* สีขอบสถานะ CLOSE ที่จางลง */
+}

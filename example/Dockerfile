@@ -5,11 +5,26 @@ RUN \
   apk add --no-cache \	
     python3
 
-WORKDIR /data
+FROM node:18 AS builder
+WORKDIR /usr/src/app
 
-EXPOSE 8080
+COPY package*.json ./
 
-COPY supervisor.sh /
-RUN chmod a+x /supervisor.sh 
+RUN npm install
 
-CMD ["/supervisor.sh" ]
+COPY . .
+RUN npm run build
+
+EXPOSE 80
+
+FROM nginx:1.13.12-alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+# คัดลอกไฟล์จาก builder stage
+COPY --from=builder /usr/src/app/dist/my-app /usr/share/nginx/html
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

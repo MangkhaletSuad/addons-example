@@ -1,0 +1,62 @@
+<header class="main" role="banner">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-12" style="padding-left: 120px;">
+                <h2>ACTIVITY MANAGEMENT</h2>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-8">
+                <div class="group">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2>ACTIVITY LIST</h2>
+                        <div ngbDropdown class="dropdown">
+                            <a type="button" id="dropdownMenuicon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle style="overflow: hidden;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                  <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                              </svg>
+                            </a>
+                            <ul ngbDropdownMenu class="dropdown-menu" style="display: b;" aria-labelledby="dropdownMenuicon">
+                                <!-- <button (click)="toggleCard()" class="dropdown-item" href="#"> <i class="fas fa-user-alt pe-2"></i>My Profile</button> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Display all activities in the system</p>
+                    <docs-card #cardTest></docs-card>
+                    <div class="group">
+                        <div style="display: flex; justify-content: space-between">
+                            <p>Show 1-50 of 132 activities</p>
+                            <a href="">1</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <docs-events #event (eventSelect)="getDataFromChild(event)"></docs-events> -->
+            </div>
+            <div class="col-md-8">
+                <card-event #card_event></card-event>
+            </div>
+        </div>
+
+    </div>
+</body>
+<router-outlet>
+</router-outlet>
+
+<!-- <input type="file" (change)="onChange($event.target.files)" />
+
+<div>
+    <h3>File Content</h3>
+    <div *ngFor="let line of fileContent; let i = index" class="form-control">
+      <input
+        type="checkbox"
+        [attr.id]="'line' + i"
+        [(ngModel)]="line.isChecked"
+      />
+      <label [attr.for]="'line' + i">{{ line.text }}</label>
+    </div>
+</div> -->

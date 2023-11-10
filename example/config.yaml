@@ -1,12 +1,12 @@
-name: "Example add-on"
-version: "Test"
-slug: "example"
-description: "Example add-on"
+name: "Event management"
+version: "0.1.0"
+slug: "Event"
+description: "Event management add-on"
 url: "https://github.com/MangkhaletSuad/addons-example.git"
 init: false
 
 ingress: true
-ingress_port: 8080
+ingress_port: 8202
 
 panel_icon: "mdi:cctv"
 panel_title: "Example"
@@ -19,8 +19,7 @@ arch:
   - "i386"
 
 options:
-  message: "Test"
 
 schema:
   message: "str?"
-  image: "ghcr.io/home-assistant/{arch}-addon-example"
+

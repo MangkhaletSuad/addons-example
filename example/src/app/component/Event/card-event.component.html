@@ -1,0 +1,118 @@
+<div *ngIf="new" class="card-activitys">
+    <div class="card-contents">
+        <div class="header">
+            <div class="head">
+                <h2>Intruder Detected</h2>
+                <h3>Activity Date: {{ selectedItems?.DateTime }}</h3>
+            </div>
+            <div class="status">
+                <button (click)="changeAccept()" class="btn btn-primary">Accept</button>
+                <button (click)="changeClose()" class="btn btn-success">Close</button>
+            </div>
+        </div>
+        <div class="right" style="border-bottom: 1px solid #dee2e6;">
+            <div style="display: flex;">
+                <div>
+                    <div class="Notification">
+                        <div class="type-noti">Event ID :</div>
+                        <div class="Noti">{{ selectedItems?.id }}</div>
+                    </div>
+                    <div class="Notification">
+                        <div class="type-noti">status :</div>
+                        <div class="Noti">{{ selectedItems?.status }}</div>
+                    </div>
+                    <div class="Notification" style="display: flex;">
+                        <div class="type-noti">Severity :</div>
+                        <div ngbDropdown class="dropdown" style="padding-left: 110px;">
+                            <button class="Severity" type="button" id="dropdownMenuicon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                                <div>
+                                    <img [src]="getIconUrl()" alt="">{{ selectedPriority }}
+                                </div>
+                            </button>
+                            <ul ngbDropdownMenu class="dropdown-menu" style="display: b;" aria-labelledby="dropdownMenuicon">
+                                <li *ngFor="let priority of Serverity">
+                                    <button class="dropdown-item" (click)="selectedPriority = priority">
+                                        {{ priority }}
+                                      </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>Attachments :</div>
+                </div>
+                <div style="padding-left: 200px;">
+                    <div class="Notification">
+                        <div class="">Event Name :</div>
+                        <div class="Noti">{{ selectedItems?.name }}</div>
+                    </div>
+                    <div class="Notification">
+                        <div class="">Device Name :</div>
+                        <div class="Noti">{{ selectedItems?.Location }}</div>
+                    </div>
+                    <div class="Notification">
+                        <div class="">Assignee :</div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 10px;">
+                <img src="{{ selectedItems?.image }}" alt="{{ selectedItems?.name }}" (click)="alert()" />
+                <img src="{{ selectedItems?.image }}" alt="{{ selectedItems?.name }}" (click)="alert()" style="padding-left: 20px;" />
+            </div>
+        </div>
+        <!-- <div class="main" style="border-bottom: 1px solid #888;">
+            <img src="{{ selectedItems?.image }}" alt="{{ selectedItems?.name }}" (click)="alert()" />
+            <img src="{{ selectedItems?.image }}" alt="{{ selectedItems?.name }}" (click)="alert()" />
+        </div> -->
+
+        <div style="overflow-y: scroll;">
+            <form style="padding: 20px;">
+                <div class="form-group" style="padding-top: 10px; padding-bottom: 10px;">
+                    <label for="exampleFormControlTextarea1">Note</label>
+                    <div style="border-radius: 5px; border: 1px solid #dee2e6;">
+                        <div style="padding: 20px;">
+                            <textarea class="form-control" id="text" rows="3" [formControl]="text"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="submit(content2)">Add Note</button>
+            </form>
+
+            <ng-template #content2 let-modal>
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal">Assignment update</h4>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <p>{{ text.value }}</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" (click)="saveData()" (click)="modal.close('Save click')">Save</button>
+                </div>
+            </ng-template>
+
+            <div style=" height: 70px; border-radius: 10px;">
+                <div class="group-card" style=" padding: 20px;">
+                    <!-- <div class="card-text" *ngIf="selectedItems">
+                            <div class="card-header" style="width: 100%;">
+                                <button class="btn btn-danger" (click)="deleteSelectedCard()">Delete</button>
+                            </div>
+                        </div> -->
+                    <div class="card-text" *ngFor="let note of selectedItems?.note.slice().reverse(); let i = index" style="padding-top: 0px;">
+                        <div class="card-header" style="width: 100%;">
+                            <button class="btn btn-danger" (click)="deleteCard(i)">Delete</button>
+                        </div>
+                        <div style="padding-left: 20px; padding-right: 20px;">
+                            <h6>Message:</h6>
+                            <p>{{ note.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

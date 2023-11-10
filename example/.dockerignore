@@ -1,0 +1,33 @@
+# Angular
+.angular
+
+# Node modules
+node_modules
+
+# Dist folder
+dist/
+
+# IDE - VSCode
+.vscode
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# OS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.swp
+*.log
+
+# End-to-end test reports
+e2e/
+coverage/
+
+# Editor directories
+.idea
+
+# Other
+README.md
