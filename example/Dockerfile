@@ -1,4 +1,5 @@
-FROM node:18 AS builder
+ARG BUILD_FROM
+FROM ${BUILD_FROM} AS builder
 
 WORKDIR /usr/src/app
 

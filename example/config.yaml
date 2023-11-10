@@ -1,6 +1,6 @@
 name: "Event Management"
 version: "0.1.0"
-slug: "Event Management"
+slug: "event_management"  # แก้เป็นค่าไม่ซ้ำกัน
 description: "Event Management add-on"
 url: "https://github.com/MangkhaletSuad/addons-example.git"
 init: false
@@ -9,14 +9,14 @@ ingress: true
 ingress_port: 80
 
 panel_icon: "mdi:cctv"
-panel_title: "Event Management"
+panel_title: "Event Management"  # แก้เป็นค่าไม่ซ้ำกัน
 
 arch:
-  - "armhf"
-  - "armv7"
-  - "aarch64"
-  - "amd64"
-  - "i386"
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
 
 options:
   message: "str?"
