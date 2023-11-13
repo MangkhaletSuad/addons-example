@@ -11,12 +11,12 @@ ingress_port: 8080
 panel_icon: "mdi:cctv"
 panel_title: "Example"
 
-arch:
-  - "armhf"
-  - "armv7"
-  - "aarch64"
-  - "amd64"
-  - "i386"
+# arch:
+#   - "armhf"
+#   - "armv7"
+#   - "aarch64"
+#   - "amd64"
+#   - "i386"
 
 options:
   message: "Test"
