@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  event_manager_frontend:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8202:80"
+    image: my-event:latest
